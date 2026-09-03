@@ -4,7 +4,7 @@
             <h2 id="projects-title">Proyectos</h2>
             <p>
                 Una selección de proyectos personales y académicos.
-                Puedes ver <a href="https://github.com/Mario-Grc">más proyectos en mi GitHub</a>.
+                Puedes ver <a href="https://github.com/Mario-Grc" target="_blank" rel="noopener noreferrer">más proyectos en mi GitHub</a>.
             </p>
         </header>
 
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
                 @if (project.codeUrl) {
-                <a class="project-link" [href]="project.codeUrl" (click)="$event.preventDefault()">Ver código</a>
+                <a class="project-link" [href]="project.codeUrl" target="_blank" rel="noopener noreferrer">Ver código</a>
                 }
             </article>
             }

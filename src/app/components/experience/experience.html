@@ -1,1 +1,36 @@
-<p>experience works!</p>
+<section class="experience-section" aria-labelledby="experience-title">
+	<div class="experience-content">
+		<header class="experience-heading">
+			<h2 id="experience-title">Experiencia</h2>
+			<p>Experiencia profesional y prácticas.</p>
+		</header>
+
+		<div class="experience-list">
+			@for (experience of experiences; track experience.company) {
+				<article class="experience-item">
+					<div class="experience-summary">
+						<h3>{{ experience.company }}</h3>
+						<p class="experience-role">{{ experience.role }}</p>
+						<p class="experience-meta">{{ experience.period }}, {{ experience.duration }}. {{ experience.location }}</p>
+					</div>
+
+					<div class="experience-details">
+						<p>{{ experience.description }}</p>
+						<ul>
+							@for (task of experience.tasks; track task.description) {
+								<li>
+									{{ task.description }}
+									@if (task.technologies) {
+										@for (technology of task.technologies; track technology; let last = $last) {
+											<strong>{{ technology }}</strong>@if (!last) {<span aria-hidden="true"> y </span>}
+										}.
+									}
+								</li>
+							}
+						</ul>
+					</div>
+				</article>
+			}
+		</div>
+	</div>
+</section>

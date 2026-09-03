@@ -1,6 +1,10 @@
 .site-header {
+	background: var(--color-surface);
 	border-bottom: 2px solid;
 	min-height: 64px;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 }
 
 .header-content {
@@ -118,10 +122,6 @@
 }
 
 @media (max-width: 960px) {
-	.site-header {
-		position: relative;
-	}
-
 	.header-content {
 		grid-template-columns: minmax(0, 1fr) auto auto;
 		width: 100%;
