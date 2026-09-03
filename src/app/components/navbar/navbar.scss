@@ -1,0 +1,144 @@
+.site-header {
+	align-items: center;
+	border-bottom: 2px solid;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+	min-height: 64px;
+	padding: 0 var(--space-page);
+}
+
+.personal-name {
+	color: var(--color-ink);
+	font-weight: 600;
+	justify-self: start;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.main-navigation {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+}
+
+.main-navigation a,
+.language-switcher button {
+	position: relative;
+}
+
+.main-navigation a {
+	color: var(--color-ink);
+	text-decoration: none;
+}
+
+.main-navigation a::after {
+	background: var(--color-ink);
+	bottom: -7px;
+	content: '';
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 180ms ease;
+	width: 100%;
+}
+
+.main-navigation a:hover::after,
+.main-navigation a:focus-visible::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.language-switcher {
+	align-items: center;
+	display: flex;
+	gap: 0.45rem;
+	justify-self: end;
+	white-space: nowrap;
+}
+
+.language-switcher button,
+.menu-toggle {
+	background: none;
+	cursor: pointer;
+	padding: 0.35rem 0;
+}
+
+.language-switcher button {
+	color: var(--color-muted);
+}
+
+.language-switcher button.is-active,
+.language-switcher button:hover,
+.language-switcher button:focus-visible {
+	color: var(--color-ink);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.menu-toggle {
+	display: none;
+	gap: 0.55rem;
+	align-items: center;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+	background: var(--color-ink);
+	display: block;
+	height: 1px;
+	width: 16px;
+}
+
+.menu-icon {
+	position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+	content: '';
+	left: 0;
+	position: absolute;
+}
+
+.menu-icon::before { top: -5px; }
+.menu-icon::after { top: 5px; }
+
+@media (max-width: 960px) {
+	.site-header {
+		grid-template-columns: minmax(0, 1fr) auto auto;
+		padding: 0 var(--space-page);
+		position: relative;
+	}
+
+	.menu-toggle {
+		display: flex;
+		justify-self: end;
+		margin-right: 1.25rem;
+	}
+
+	.main-navigation {
+		background: var(--color-surface);
+		border-top: 1px solid var(--color-border);
+        border-bottom: 2px solid;
+		display: none;
+		flex-direction: column;
+		gap: 0;
+		left: 0;
+		padding: 0.5rem var(--space-page) 0.8rem;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		z-index: 2;
+	}
+
+	.main-navigation.is-open { display: flex; }
+
+	.main-navigation a {
+		padding: 0.75rem 0;
+	}
+
+	.main-navigation a::after { bottom: 0.45rem; }
+}

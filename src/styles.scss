@@ -1,0 +1,37 @@
+:root {
+	--font-body: 'DM Sans', sans-serif;
+	--color-ink: #111820;
+	--color-muted: #69727c;
+	--color-border: #b9bcc1;
+	--color-accent: #3157ff;
+	--color-surface: #f7f7f5;
+	--space-page: 5.5vw;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--color-surface);
+	color: var(--color-ink);
+	font-family: var(--font-body);
+	font-size: 1rem;
+	margin: 0;
+}
+
+button,
+a {
+	font: inherit;
+}
+
+button {
+	border: 0;
+}
