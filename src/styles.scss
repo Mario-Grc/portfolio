@@ -6,6 +6,7 @@
 	--color-accent: #3157ff;
 	--color-surface: #f7f7f5;
 	--content-width: 72rem;
+	--header-height: 4rem;
 	--space-page: 5.5vw;
 }
 
@@ -26,6 +27,10 @@ body {
 	font-family: var(--font-body);
 	font-size: 1rem;
 	margin: 0;
+}
+
+main > [id] {
+	scroll-margin-top: var(--header-height);
 }
 
 button,
