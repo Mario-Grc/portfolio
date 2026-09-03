@@ -1,8 +1,14 @@
 .site-header {
-	align-items: center;
 	border-bottom: 2px solid;
+	min-height: 64px;
+}
+
+.header-content {
+	align-items: center;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+	margin: 0 auto;
+	max-width: calc(var(--content-width) + (2 * var(--space-page)));
 	min-height: 64px;
 	padding: 0 var(--space-page);
 }
@@ -108,9 +114,12 @@
 
 @media (max-width: 960px) {
 	.site-header {
-		grid-template-columns: minmax(0, 1fr) auto auto;
-		padding: 0 var(--space-page);
 		position: relative;
+	}
+
+	.header-content {
+		grid-template-columns: minmax(0, 1fr) auto auto;
+		width: 100%;
 	}
 
 	.menu-toggle {

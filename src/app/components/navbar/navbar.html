@@ -1,43 +1,45 @@
 <header class="site-header">
-	<a class="personal-name" href="#inicio" (click)="closeMenu()">Mario García Abellán</a>
+	<div class="header-content">
+		<a class="personal-name" href="#inicio" (click)="closeMenu()">Mario García Abellán</a>
 
-	<button
-		class="menu-toggle"
-		type="button"
-		aria-controls="main-navigation"
-		[attr.aria-expanded]="menuOpen()"
-		(click)="menuOpen.update((isOpen) => !isOpen)"
-	>
-		<span class="menu-icon" aria-hidden="true"></span>
-		<span>Menú</span>
-	</button>
-
-	<nav
-		id="main-navigation"
-		class="main-navigation"
-		[class.is-open]="menuOpen()"
-		aria-label="Navegación principal"
-	>
-		<a href="#inicio" (click)="closeMenu()">Inicio</a>
-		<a href="#proyectos" (click)="closeMenu()">Proyectos</a>
-		<a href="#experiencia" (click)="closeMenu()">Experiencia</a>
-		<a href="#habilidades" (click)="closeMenu()">Habilidades</a>
-		<a href="#contacto" (click)="closeMenu()">Contacto</a>
-	</nav>
-
-	<div class="language-switcher" aria-label="Seleccionar idioma">
 		<button
+			class="menu-toggle"
 			type="button"
-			[class.is-active]="selectedLanguage() === 'es'"
-			[attr.aria-pressed]="selectedLanguage() === 'es'"
-			(click)="setLanguage('es')"
-		>ES</button>
-		<span aria-hidden="true">/</span>
-		<button
-			type="button"
-			[class.is-active]="selectedLanguage() === 'en'"
-			[attr.aria-pressed]="selectedLanguage() === 'en'"
-			(click)="setLanguage('en')"
-		>EN</button>
+			aria-controls="main-navigation"
+			[attr.aria-expanded]="menuOpen()"
+			(click)="menuOpen.update((isOpen) => !isOpen)"
+		>
+			<span class="menu-icon" aria-hidden="true"></span>
+			<span>Menú</span>
+		</button>
+
+		<nav
+			id="main-navigation"
+			class="main-navigation"
+			[class.is-open]="menuOpen()"
+			aria-label="Navegación principal"
+		>
+			<a href="#inicio" (click)="closeMenu()">Inicio</a>
+			<a href="#proyectos" (click)="closeMenu()">Proyectos</a>
+			<a href="#experiencia" (click)="closeMenu()">Experiencia</a>
+			<a href="#habilidades" (click)="closeMenu()">Habilidades</a>
+			<a href="#contacto" (click)="closeMenu()">Contacto</a>
+		</nav>
+
+		<div class="language-switcher" aria-label="Seleccionar idioma">
+			<button
+				type="button"
+				[class.is-active]="selectedLanguage() === 'es'"
+				[attr.aria-pressed]="selectedLanguage() === 'es'"
+				(click)="setLanguage('es')"
+			>ES</button>
+			<span aria-hidden="true">/</span>
+			<button
+				type="button"
+				[class.is-active]="selectedLanguage() === 'en'"
+				[attr.aria-pressed]="selectedLanguage() === 'en'"
+				(click)="setLanguage('en')"
+			>EN</button>
+		</div>
 	</div>
 </header>
