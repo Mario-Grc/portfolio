@@ -1,0 +1,81 @@
+.contact-section {
+	border-bottom: 1px solid;
+	padding: clamp(2rem, 4vw, 3rem) var(--space-page);
+}
+
+.contact-content {
+	margin: 0 auto;
+	max-width: var(--content-width);
+}
+
+.contact-heading {
+	margin-bottom: clamp(1.5rem, 4vw, 3rem);
+	max-width: 42rem;
+}
+
+.contact-heading h2 {
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 600;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	margin: 0;
+}
+
+.contact-heading p {
+	color: var(--color-muted);
+	font-size: 0.875rem;
+	line-height: 1.6;
+	margin: 0.75rem 0 0;
+}
+
+.contact-options {
+	border-top: 1px solid var(--color-border);
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-top: 1rem;
+}
+
+.contact-option h3 {
+	font-size: 0.875rem;
+	font-weight: 600;
+	margin: 0 0 0.6rem;
+}
+
+.contact-option a,
+.contact-option button {
+	color: var(--color-ink);
+	font-size: 0.875rem;
+}
+
+.contact-option a {
+	text-underline-offset: 0.25rem;
+}
+
+.email-actions {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.email-actions button {
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	text-decoration: underline;
+	text-underline-offset: 0.25rem;
+}
+
+.contact-option a:hover,
+.contact-option a:focus-visible,
+.email-actions button:hover,
+.email-actions button:focus-visible {
+	text-decoration-thickness: 2px;
+}
+
+@media (max-width: 600px) {
+	.contact-options {
+		grid-template-columns: 1fr;
+	}
+}
