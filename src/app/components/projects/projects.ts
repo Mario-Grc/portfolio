@@ -19,7 +19,7 @@ export class Projects {
 		{
 			number: '01',
 			title: 'QuackCode',
-			description: 'Entorno para practicar programación con un editor de código, un asistente basado en la técnica Rubber Duck Debugging y ejecución de pruebas. El asistente utiliza modelos de IA locales.',
+			description: 'Entorno para practicar programación con un editor de código, un asistente inspirado en la técnica Rubber Duck Debugging y ejecución de pruebas. El asistente utiliza modelos de IA locales.',
 			technologies: ['React', 'TypeScript', 'Express', 'SQLite', 'LM Studio'],
 			codeUrl: 'https://github.com/Mario-Grc/proyecto-tfg',
 		},
