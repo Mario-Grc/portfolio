@@ -1,0 +1,37 @@
+<section class="education-section" aria-labelledby="education-title">
+    <div class="education-content">
+        <header class="education-heading">
+            <h2 id="education-title">Formación</h2>
+            <p>Estudios y certificaciones.</p>
+        </header>
+
+        <article class="degree">
+            <p class="degree-period">sept. 2022 - jun. 2026</p>
+            <div class="degree-details">
+                <h3>Universidad de Las Palmas de Gran Canaria</h3>
+                <p>Grado en Ingeniería Informática</p>
+            </div>
+        </article>
+
+        <section class="certifications" aria-labelledby="certifications-title">
+            <h3 id="certifications-title">Certificaciones</h3>
+            <div class="certification-list">
+                @for (certification of certifications; track certification.code) {
+                <article class="certification">
+                    <div class="certification-meta">
+                        <span>{{ certification.issueDate }}</span>
+                        <span>{{ certification.code }}</span>
+                    </div>
+                    <div class="certification-details">
+                        <h4>{{ certification.title }}</h4>
+                        <p>Red Hat</p>
+                        <a [href]="certification.pdfUrl" target="_blank" rel="noopener noreferrer">
+                            Ver certificado
+                        </a>
+                    </div>
+                </article>
+                }
+            </div>
+        </section>
+    </div>
+</section>
