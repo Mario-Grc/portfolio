@@ -71,6 +71,7 @@
 .contact-option a:focus-visible,
 .email-actions button:hover,
 .email-actions button:focus-visible {
+	color: var(--color-accent);
 	text-decoration-thickness: 2px;
 }
 

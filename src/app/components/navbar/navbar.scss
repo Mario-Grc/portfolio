@@ -59,6 +59,13 @@
 	transform-origin: left;
 }
 
+.personal-name:hover,
+.personal-name:focus-visible,
+.main-navigation a:hover,
+.main-navigation a:focus-visible {
+	color: var(--color-accent);
+}
+
 .language-switcher {
 	align-items: center;
 	display: flex;
@@ -81,9 +88,14 @@
 .language-switcher button.is-active,
 .language-switcher button:hover,
 .language-switcher button:focus-visible {
-	color: var(--color-ink);
+	color: var(--color-accent);
 	text-decoration: underline;
 	text-underline-offset: 3px;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+	color: var(--color-accent);
 }
 
 .menu-toggle {

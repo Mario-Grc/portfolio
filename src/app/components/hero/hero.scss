@@ -72,6 +72,17 @@ h1 {
 	text-decoration-thickness: 2px;
 }
 
+.button-primary:hover,
+.button-primary:focus-visible {
+	background: var(--color-accent);
+	color: var(--color-surface);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+	color: var(--color-accent);
+}
+
 @media (max-width: 600px) {
 	h1 {
 	font-size: clamp(2.5rem, 13vw, 4rem);
