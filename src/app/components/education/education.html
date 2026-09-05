@@ -20,14 +20,20 @@
                 <article class="certification">
                     <div class="certification-meta">
                         <span>{{ language.t().education.issueDates[certification.issueDateKey] }}</span>
-                        <span>{{ certification.code }}</span>
+                        @if (certification.code) {
+                            <span class="certification-code">{{ certification.code }}</span>
+                        }
                     </div>
                     <div class="certification-details">
-                        <h4>{{ certification.title }}</h4>
-                        <p>{{ language.t().education.provider }}</p>
-                        <a [href]="certification.pdfUrl" target="_blank" rel="noopener noreferrer">
-                            {{ language.t().education.viewCertificate }}
-                        </a>
+                        <h4>{{ language.t().education.certificationTitles[certification.titleKey] }}</h4>
+                        @if (certification.provider) {
+                            <p>{{ certification.provider }}</p>
+                        }
+                        @if (certification.pdfUrl) {
+                            <a [href]="certification.pdfUrl" target="_blank" rel="noopener noreferrer">
+                                {{ language.t().education.viewCertificate }}
+                            </a>
+                        }
                     </div>
                 </article>
                 }

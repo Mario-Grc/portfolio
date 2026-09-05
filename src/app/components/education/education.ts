@@ -2,12 +2,14 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../i18n/language.service';
 
 type IssueDateKey = keyof typeof import('../../i18n/translations').es.education.issueDates;
+type CertificationTitleKey = keyof typeof import('../../i18n/translations').es.education.certificationTitles;
 
 interface Certification {
-  title: string;
+  titleKey: CertificationTitleKey;
   code: string;
+  provider?: string;
   issueDateKey: IssueDateKey;
-  pdfUrl: string;
+  pdfUrl?: string;
 }
 
 @Component({
@@ -20,22 +22,30 @@ export class Education {
   protected readonly language = inject(LanguageService);
   protected readonly certifications: Certification[] = [
     {
-      title: 'Red Hat System Administration II',
+      titleKey: 'rh134',
       code: 'RH134',
+      provider: 'Red Hat',
       issueDateKey: 'rh134',
       pdfUrl: '/documents/certifications/Certificate-of-Attendance-(RH134-9.0).pdf',
     },
     {
-      title: 'Red Hat System Administration I',
+      titleKey: 'rh124',
       code: 'RH124',
+      provider: 'Red Hat',
       issueDateKey: 'rh124',
       pdfUrl: '/documents/certifications/Certificate-of-Attendance-(RH124-9.0).pdf',
     },
     {
-      title: 'Getting Started with Linux Fundamentals',
+      titleKey: 'rh104',
       code: 'RH104',
+      provider: 'Red Hat',
       issueDateKey: 'rh104',
       pdfUrl: '/documents/certifications/Certificate-of-Attendance-(RH104-9.1).pdf',
+    },
+    {
+      titleKey: 'olimpiada',
+      code: '',
+      issueDateKey: 'olimpiada',
     },
   ];
 }

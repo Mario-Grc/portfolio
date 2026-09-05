@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio con diseño minimalista para mostrar mis proyectos, formación, certificaciones y demás información relevante.
+Portfolio con diseño minimalista en el que muestro algunos proyectos destacados, mi formación, certificaciones y demás información relevante.
 
 <img src="public/images/captura.png" width="900" alt="Captura de pantalla del portfolio" />
 
