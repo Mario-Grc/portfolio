@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,7 @@ import { Component, signal } from '@angular/core';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  protected readonly language = inject(LanguageService);
   protected readonly email = 'mariogarciaabellan@gmail.com';
   protected readonly githubUrl = 'https://github.com/Mario-Grc';
   protected readonly linkedinUrl = 'https://www.linkedin.com/in/mario-garcia-abellan/';

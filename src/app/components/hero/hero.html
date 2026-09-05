@@ -1,18 +1,12 @@
 <section class="hero-section" aria-labelledby="hero-title">
     <div class="hero-content">
-        <p class="hero-eyebrow">Mario García Abellán. Ingeniero de Software</p>
-        <h1 id="hero-title">Construyo software<br />de principio a fin.</h1>
-        <p class="hero-description">
-            Graduado en Ingeniería Informática por la ULPGC, con formación en
-            administración de sistemas Linux y seguridad.
-        </p>
-        <p class="hero-details">
-            Gran Canaria. Español nativo e Inglés B2.
-            Abierto a nuevas oportunidades.
-        </p>
+        <p class="hero-eyebrow">{{ language.t().hero.eyebrow }}</p>
+        <h1 id="hero-title">{{ language.t().hero.title }}</h1>
+        <p class="hero-description">{{ language.t().hero.description }}</p>
+        <p class="hero-details">{{ language.t().hero.details }}</p>
         <div class="hero-actions">
-            <a class="button button-primary" href="#contacto">Contactar</a>
-            <a class="button button-secondary" href="/curriculumES.pdf" target="_blank" rel="noopener noreferrer">Currículum</a>
+            <a class="button button-primary" href="#contacto">{{ language.t().hero.contact }}</a>
+            <a class="button button-secondary" [href]="language.t().hero.curriculumUrl" target="_blank" rel="noopener noreferrer">{{ language.t().hero.curriculum }}</a>
         </div>
     </div>
 </section>

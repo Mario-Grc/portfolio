@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../i18n/language.service';
+import { es } from '../../i18n/translations';
+
+type ProjectKey = keyof typeof es.projects.descriptions;
+type ProjectTagKey = keyof typeof es.projects.tags;
 
 interface Project {
-	tag: string;
+	tagKey: ProjectTagKey;
 	title: string;
-	description: string;
+	descriptionKey: ProjectKey;
 	technologies: string[];
 	codeUrl: string;
 }
@@ -15,46 +20,47 @@ interface Project {
 	styleUrl: './projects.scss',
 })
 export class Projects {
+	protected readonly language = inject(LanguageService);
 	protected readonly projects: Project[] = [
 		{
-			tag: 'Full Stack',
+			tagKey: 'quackCode',
 			title: 'QuackCode',
-			description: 'Entorno para practicar programación con un editor de código, un asistente inspirado en la técnica Rubber Duck Debugging y ejecución de pruebas. El asistente utiliza modelos de IA locales.',
+			descriptionKey: 'quackCode',
 			technologies: ['React', 'TypeScript', 'Express', 'SQLite', 'LM Studio'],
 			codeUrl: 'https://github.com/Mario-Grc/proyecto-tfg',
 		},
 		{
-			tag: 'Android',
+			tagKey: 'clashPoints',
 			title: 'ClashPoints',
-			description: 'Juego de preguntas y respuestas para Android, desarrollado junto a un compañero, en el que la velocidad y la precisión determinan la puntuación y el ranking global.',
+			descriptionKey: 'clashPoints',
 			technologies: ['Kotlin', 'Jetpack Compose', 'Firebase', 'MVVM'],
 			codeUrl: 'https://github.com/Mario-Grc/ClashPoints',
 		},
 		{
-			tag: 'Web',
+			tagKey: 'timac',
 			title: 'Timac',
-			description: 'Web para comprar en una ferretería ficticia, desarrollada junto a dos compañeros. Construida con Angular e Ionic para poder utilizarla también como aplicación móvil.',
+			descriptionKey: 'timac',
 			technologies: ['Angular', 'Ionic', 'TypeScript', 'Firebase'],
 			codeUrl: 'https://github.com/IanSamuelTrujilloGil/Timac',
 		},
 		{
-			tag: 'Full Stack',
+			tagKey: 'nexoRepair',
 			title: 'Nexo Repair',
-			description: 'Sistema full stack para gestionar las reparaciones y el trabajo diario de un negocio de dispositivos electrónicos.',
+			descriptionKey: 'nexoRepair',
 			technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
 			codeUrl: 'https://github.com/Mario-Grc/nexo-repair',
 		},
 		{
-			tag: 'Cloud',
+			tagKey: 'animalShelterApi',
 			title: 'Animal Shelter API',
-			description: 'API REST desplegada en AWS para comparar dos arquitecturas: una basada en contenedores (ECS Fargate) y otra Serverless (Lambda). Automatizada por completo con CloudFormation, incluye infraestructura de red aislada (VPC, subnets privadas, NLB) y una comparativa de costes.',
+			descriptionKey: 'animalShelterApi',
 			technologies: ['AWS', 'CloudFormation', 'ECS Fargate', 'AWS Lambda', 'Docker', 'Node.js', 'PostgreSQL'],
 			codeUrl: 'https://github.com/Mario-Grc/CN-P1',
 		},
 		{
-			tag: 'Computer Vision',
+			tagKey: 'computerVisionAimAssist',
 			title: 'Computer Vision Aim Assist',
-			description: 'Proyecto académico de visión por computador, desarrollado junto a dos compañeros. Analiza la pantalla mientras juegas un videojuego para detectar y seguir objetivos en tiempo real, incorporando funciones experimentales de asistencia al apuntado.',
+			descriptionKey: 'computerVisionAimAssist',
 			technologies: ['Python', 'OpenCV', 'YOLO', 'Kalman Filter'],
 			codeUrl: 'https://github.com/juanfradelrm/Computer-Vision-Aim-Assist',
 		},

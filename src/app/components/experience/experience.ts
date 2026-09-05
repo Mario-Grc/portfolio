@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../i18n/language.service';
 
 interface ExperienceTask {
   description: string;
@@ -22,6 +23,7 @@ interface ExperienceItem {
   styleUrl: './experience.scss',
 })
 export class Experience {
+  protected readonly language = inject(LanguageService);
   protected readonly experiences: ExperienceItem[] = [
     {
       company: 'Grupo ARI',

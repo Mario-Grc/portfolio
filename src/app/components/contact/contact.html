@@ -1,32 +1,30 @@
 <section class="contact-section" aria-labelledby="contact-title">
 	<div class="contact-content">
 		<header class="contact-heading">
-			<h2 id="contact-title">Contacto</h2>
+			<h2 id="contact-title">{{ language.t().contact.title }}</h2>
 			<p>
-				Si buscas a alguien para desarrollar un proyecto o quieres comentar una idea,
-				puedes escribirme. Estoy abierto a trabajos presenciales y remotos,
-				además de colaboraciones en proyectos puntuales.
+				{{ language.t().contact.description }}
 			</p>
 		</header>
 
 		<div class="contact-options">
 			<div class="contact-option contact-email">
-				<h3>Email</h3>
+				<h3>{{ language.t().contact.email }}</h3>
 				<div class="email-actions">
 					<a [href]="'mailto:' + email">{{ email }}</a>
 					<button type="button" (click)="copyEmail()">
-						{{ emailCopied() ? 'Copiado' : 'Copiar' }}
+						{{ emailCopied() ? language.t().contact.copied : language.t().contact.copy }}
 					</button>
 				</div>
 			</div>
 
 			<div class="contact-option">
-				<h3>GitHub</h3>
+				<h3>{{ language.t().contact.github }}</h3>
 				<a [href]="githubUrl" target="_blank" rel="noopener noreferrer">github.com/Mario-Grc</a>
 			</div>
 
 			<div class="contact-option">
-				<h3>LinkedIn</h3>
+				<h3>{{ language.t().contact.linkedin }}</h3>
 				<a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer">linkedin.com/in/mario-garcia-abellan/</a>
 			</div>
 		</div>

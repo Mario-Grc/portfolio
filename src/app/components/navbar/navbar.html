@@ -5,25 +5,25 @@
 		<button class="menu-toggle" type="button" aria-controls="main-navigation" [attr.aria-expanded]="menuOpen()"
 			(click)="menuOpen.update((isOpen) => !isOpen)">
 			<span class="menu-icon" aria-hidden="true"></span>
-			<span>Menú</span>
+			<span>{{ language.t().nav.menu }}</span>
 		</button>
 
 		<nav id="main-navigation" class="main-navigation" [class.is-open]="menuOpen()"
-			aria-label="Navegación principal">
-			<a href="#inicio" (click)="closeMenu()">Inicio</a>
-			<a href="#proyectos" (click)="closeMenu()">Proyectos</a>
-			<a href="#experiencia" (click)="closeMenu()">Experiencia</a>
-			<a href="#formacion" (click)="closeMenu()">Formación</a>
-			<a href="#habilidades" (click)="closeMenu()">Habilidades</a>
-			<a href="#contacto" (click)="closeMenu()">Contacto</a>
+			[attr.aria-label]="language.t().nav.mainNavigation">
+			<a href="#inicio" (click)="closeMenu()">{{ language.t().nav.home }}</a>
+			<a href="#proyectos" (click)="closeMenu()">{{ language.t().nav.projects }}</a>
+			<a href="#experiencia" (click)="closeMenu()">{{ language.t().nav.experience }}</a>
+			<a href="#formacion" (click)="closeMenu()">{{ language.t().nav.education }}</a>
+			<a href="#habilidades" (click)="closeMenu()">{{ language.t().nav.skills }}</a>
+			<a href="#contacto" (click)="closeMenu()">{{ language.t().nav.contact }}</a>
 		</nav>
 
-		<div class="language-switcher" aria-label="Seleccionar idioma">
-			<button type="button" [class.is-active]="selectedLanguage() === 'es'"
-				[attr.aria-pressed]="selectedLanguage() === 'es'" (click)="setLanguage('es')">ES</button>
+		<div class="language-switcher" [attr.aria-label]="language.t().nav.languageSelector">
+			<button type="button" [class.is-active]="language.lang() === 'es'"
+				[attr.aria-pressed]="language.lang() === 'es'" (click)="language.setLanguage('es')">ES</button>
 			<span aria-hidden="true">/</span>
-			<button type="button" [class.is-active]="selectedLanguage() === 'en'"
-				[attr.aria-pressed]="selectedLanguage() === 'en'" (click)="setLanguage('en')">EN</button>
+			<button type="button" [class.is-active]="language.lang() === 'en'"
+				[attr.aria-pressed]="language.lang() === 'en'" (click)="language.setLanguage('en')">EN</button>
 		</div>
 	</div>
 </header>

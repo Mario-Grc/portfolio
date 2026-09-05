@@ -1,24 +1,24 @@
 <section class="projects-section" aria-labelledby="projects-title">
     <div class="projects-content">
         <header class="projects-heading">
-            <h2 id="projects-title">Proyectos</h2>
+            <h2 id="projects-title">{{ language.t().projects.title }}</h2>
             <p>
-                Una selección de proyectos personales y académicos.
-                Puedes ver <a href="https://github.com/Mario-Grc" target="_blank" rel="noopener noreferrer">más proyectos en mi GitHub</a>.
+                {{ language.t().projects.subtitle }}
+                {{ language.t().projects.githubPrefix }} <a href="https://github.com/Mario-Grc" target="_blank" rel="noopener noreferrer">{{ language.t().projects.githubLink }}</a>.
             </p>
         </header>
 
         <div class="project-list">
-            @for (project of projects; track project.tag) {
+            @for (project of projects; track project.title) {
             <article class="project-item">
-                <span class="project-tag" aria-hidden="true">{{ project.tag }}</span>
+                <span class="project-tag" aria-hidden="true">{{ language.t().projects.tags[project.tagKey] }}</span>
                 <div class="project-information">
                     <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
-                    <p class="project-technologies" aria-label="Tecnologías utilizadas">{{ project.technologies.join(', ') }}</p>
+                    <p>{{ language.t().projects.descriptions[project.descriptionKey] }}</p>
+                    <p class="project-technologies" [attr.aria-label]="language.t().projects.technologies">{{ project.technologies.join(', ') }}</p>
                 </div>
                 @if (project.codeUrl) {
-                <a class="project-link" [href]="project.codeUrl" target="_blank" rel="noopener noreferrer">Ver código</a>
+                <a class="project-link" [href]="project.codeUrl" target="_blank" rel="noopener noreferrer">{{ language.t().projects.viewCode }}</a>
                 }
             </article>
             }

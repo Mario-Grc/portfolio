@@ -1,6 +1,5 @@
-import { Component, signal } from '@angular/core';
-
-type Language = 'es' | 'en';
+import { Component, inject, signal } from '@angular/core';
+import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +8,11 @@ type Language = 'es' | 'en';
   styleUrl: './navbar.scss',
 })
 export class Navbar {
+  protected readonly language = inject(LanguageService);
   protected readonly menuOpen = signal(false);
-  protected readonly selectedLanguage = signal<Language>('es');
 
   protected closeMenu(): void {
     this.menuOpen.set(false);
   }
 
-  protected setLanguage(language: Language): void {
-    this.selectedLanguage.set(language);
-  }
 }

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../i18n/language.service';
 
 interface SkillGroup {
-  title: string;
+  key: 'languages' | 'frameworks' | 'data' | 'tools';
   skills: string[];
 }
 
@@ -12,22 +13,32 @@ interface SkillGroup {
   styleUrl: './skills.scss',
 })
 export class Skills {
+  protected readonly language = inject(LanguageService);
   protected readonly skillGroups: SkillGroup[] = [
     {
-      title: 'Lenguajes',
+      key: 'languages',
       skills: ['PHP', 'Java', 'Python', 'JavaScript', 'TypeScript', 'Kotlin', 'GDScript'],
     },
     {
-      title: 'Frameworks y desarrollo',
+      key: 'frameworks',
       skills: ['Laravel', 'Spring Boot', 'Angular', 'React', 'Ionic', 'Express'],
     },
     {
-      title: 'Datos y backend',
+      key: 'data',
       skills: ['PostgreSQL', 'MySQL', 'SQLite', 'APIs REST', 'MVC'],
     },
     {
-      title: 'Herramientas y trabajo',
-      skills: ['Git', 'Docker', 'Linux', 'Apache', 'AWS', 'Scrum', 'CI/CD'],
+      key: 'tools',
+      skills: [
+        'Git',
+        'Docker',
+        'Linux',
+        'Apache',
+        'AWS',
+        'Node.js',
+        'Scrum',
+        'CI/CD',
+      ],
     },
   ];
 }

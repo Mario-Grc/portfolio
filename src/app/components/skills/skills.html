@@ -1,14 +1,14 @@
 <section class="skills-section" aria-labelledby="skills-title">
 	<div class="skills-content">
 		<header class="skills-heading">
-			<h2 id="skills-title">Habilidades</h2>
-			<p>Tecnologías y herramientas con las que he trabajado.</p>
+			<h2 id="skills-title">{{ language.t().skills.title }}</h2>
+			<p>{{ language.t().skills.subtitle }}</p>
 		</header>
 
 		<div class="skill-groups">
-			@for (group of skillGroups; track group.title) {
-				<section class="skill-group" [attr.aria-labelledby]="group.title">
-					<h3 [id]="group.title">{{ group.title }}</h3>
+			@for (group of skillGroups; track group.key) {
+				<section class="skill-group" [attr.aria-labelledby]="group.key">
+					<h3 [id]="group.key">{{ language.t().skills.groups[group.key] }}</h3>
 					<p class="skill-list">{{ group.skills.join(', ') }}</p>
 				</section>
 			}

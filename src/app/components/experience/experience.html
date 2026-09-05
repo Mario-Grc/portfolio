@@ -1,8 +1,8 @@
 <section class="experience-section" aria-labelledby="experience-title">
 	<div class="experience-content">
 		<header class="experience-heading">
-			<h2 id="experience-title">Experiencia</h2>
-			<p>Experiencia profesional y prácticas.</p>
+			<h2 id="experience-title">{{ language.t().experience.title }}</h2>
+			<p>{{ language.t().experience.subtitle }}</p>
 		</header>
 
 		<div class="experience-list">
@@ -10,19 +10,19 @@
 				<article class="experience-item">
 					<div class="experience-summary">
 						<h3>{{ experience.company }}</h3>
-						<p class="experience-role">{{ experience.role }}</p>
-						<p class="experience-meta">{{ experience.period }}, {{ experience.duration }}. {{ experience.location }}</p>
+						<p class="experience-role">{{ language.t().experience.role }}</p>
+						<p class="experience-meta">{{ language.t().experience.period }}, {{ language.t().experience.duration }}. {{ language.t().experience.location }}</p>
 					</div>
 
 					<div class="experience-details">
-						<p>{{ experience.description }}</p>
+						<p>{{ language.t().experience.description }}</p>
 						<ul>
-							@for (task of experience.tasks; track task.description) {
+							@for (task of experience.tasks; track task.description; let taskIndex = $index) {
 								<li>
-									{{ task.description }}
+									{{ language.t().experience.tasks[taskIndex] }}
 									@if (task.technologies) {
 										@for (technology of task.technologies; track technology; let last = $last) {
-											<strong>{{ technology }}</strong>@if (!last) {<span aria-hidden="true"> y </span>}
+											<strong>{{ technology }}</strong>@if (!last) {<span aria-hidden="true"> {{ language.t().experience.conjunction }} </span>}
 										}.
 									}
 								</li>

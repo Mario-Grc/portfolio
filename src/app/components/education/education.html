@@ -1,32 +1,32 @@
 <section class="education-section" aria-labelledby="education-title">
     <div class="education-content">
         <header class="education-heading">
-            <h2 id="education-title">Formación</h2>
-            <p>Estudios y certificaciones.</p>
+            <h2 id="education-title">{{ language.t().education.title }}</h2>
+            <p>{{ language.t().education.subtitle }}</p>
         </header>
 
         <article class="degree">
-            <p class="degree-period">sept. 2022 - jun. 2026</p>
+            <p class="degree-period">{{ language.t().education.degreePeriod }}</p>
             <div class="degree-details">
                 <h3>Universidad de Las Palmas de Gran Canaria</h3>
-                <p>Grado en Ingeniería Informática</p>
+                <p>{{ language.t().education.degree }}</p>
             </div>
         </article>
 
         <section class="certifications" aria-labelledby="certifications-title">
-            <h3 id="certifications-title">Certificaciones</h3>
+            <h3 id="certifications-title">{{ language.t().education.certifications }}</h3>
             <div class="certification-list">
                 @for (certification of certifications; track certification.code) {
                 <article class="certification">
                     <div class="certification-meta">
-                        <span>{{ certification.issueDate }}</span>
+                        <span>{{ language.t().education.issueDates[certification.issueDateKey] }}</span>
                         <span>{{ certification.code }}</span>
                     </div>
                     <div class="certification-details">
                         <h4>{{ certification.title }}</h4>
-                        <p>Red Hat</p>
+                        <p>{{ language.t().education.provider }}</p>
                         <a [href]="certification.pdfUrl" target="_blank" rel="noopener noreferrer">
-                            Ver certificado
+                            {{ language.t().education.viewCertificate }}
                         </a>
                     </div>
                 </article>
