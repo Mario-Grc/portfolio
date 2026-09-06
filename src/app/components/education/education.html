@@ -13,24 +13,51 @@
             </div>
         </article>
 
-        <section class="certifications" aria-labelledby="certifications-title">
-            <h3 id="certifications-title">{{ language.t().education.certifications }}</h3>
+        <section class="certifications" aria-labelledby="courses-title">
+            <h3 id="courses-title">{{ language.t().education.courses }}</h3>
             <div class="certification-list">
-                @for (certification of certifications; track certification.code) {
+                @for (course of courses; track course.key) {
                 <article class="certification">
                     <div class="certification-meta">
-                        <span>{{ language.t().education.issueDates[certification.issueDateKey] }}</span>
-                        @if (certification.code) {
-                            <span class="certification-code">{{ certification.code }}</span>
+                        <span>{{ language.t().education.issueDates[course.key] }}</span>
+                        @if (course.code) {
+                            <span class="certification-code">{{ course.code }}</span>
                         }
                     </div>
                     <div class="certification-details">
-                        <h4>{{ language.t().education.certificationTitles[certification.titleKey] }}</h4>
-                        @if (certification.provider) {
-                            <p>{{ certification.provider }}</p>
+                        <h4>{{ language.t().education.credentialTitles[course.key] }}</h4>
+                        @if (course.provider) {
+                            <p>{{ course.provider }}</p>
                         }
-                        @if (certification.pdfUrl) {
-                            <a [href]="certification.pdfUrl" target="_blank" rel="noopener noreferrer">
+                        @if (course.pdfUrl) {
+                            <a [href]="course.pdfUrl" target="_blank" rel="noopener noreferrer">
+                                {{ language.t().education.viewCertificate }}
+                            </a>
+                        }
+                    </div>
+                </article>
+                }
+            </div>
+        </section>
+
+        <section class="certifications" aria-labelledby="recognitions-title">
+            <h3 id="recognitions-title">{{ language.t().education.recognitions }}</h3>
+            <div class="certification-list">
+                @for (recognition of recognitions; track recognition.key) {
+                <article class="certification">
+                    <div class="certification-meta">
+                        <span>{{ language.t().education.issueDates[recognition.key] }}</span>
+                        @if (recognition.code) {
+                            <span class="certification-code">{{ recognition.code }}</span>
+                        }
+                    </div>
+                    <div class="certification-details">
+                        <h4>{{ language.t().education.credentialTitles[recognition.key] }}</h4>
+                        @if (recognition.provider) {
+                            <p>{{ recognition.provider }}</p>
+                        }
+                        @if (recognition.pdfUrl) {
+                            <a [href]="recognition.pdfUrl" target="_blank" rel="noopener noreferrer">
                                 {{ language.t().education.viewCertificate }}
                             </a>
                         }

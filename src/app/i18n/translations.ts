@@ -61,23 +61,26 @@ export const es = {
   },
   education: {
     title: 'Formación',
-    subtitle: 'Estudios y certificaciones.',
+    subtitle: 'Estudios, cursos y reconocimientos.',
     degree: 'Grado en Ingeniería Informática',
     degreeEnglish: "Bachelor's Degree in Computer Engineering",
     degreePeriod: 'septiembre 2022 - junio 2026',
-    certifications: 'Certificaciones',
+    courses: 'Cursos',
+    recognitions: 'Reconocimientos',
     viewCertificate: 'Ver certificado',
-    certificationTitles: {
+    credentialTitles: {
       rh134: 'Red Hat System Administration II',
       rh124: 'Red Hat System Administration I',
       rh104: 'Getting Started with Linux Fundamentals',
-      olimpiada: 'I Olimpiada Informática de Canarias',
+      olimpiada: 'Participante en la I Olimpiada Informática de Canarias',
+      iasc: 'International Astronomical Search Collaboration (NASA/Pan-STARRS)',
     },
     issueDates: {
       rh134: 'diciembre 2024',
       rh124: 'octubre 2024',
       rh104: 'septiembre 2024',
       olimpiada: 'febrero 2022',
+      iasc: 'mayo 2021',
     },
   },
   skills: {
@@ -169,23 +172,26 @@ export const en: typeof es = {
   },
   education: {
     title: 'Education',
-    subtitle: 'Studies and certifications.',
+    subtitle: 'Studies, courses and recognitions.',
     degree: "Bachelor's Degree in Computer Engineering",
     degreeEnglish: "Bachelor's Degree in Computer Engineering",
     degreePeriod: 'September 2022 - June 2026',
-    certifications: 'Certifications',
+    courses: 'Courses',
+    recognitions: 'Honors and Awards',
     viewCertificate: 'View certificate',
-    certificationTitles: {
+    credentialTitles: {
       rh134: 'Red Hat System Administration II',
       rh124: 'Red Hat System Administration I',
       rh104: 'Getting Started with Linux Fundamentals',
-      olimpiada: '1st Canary Islands Informatics Olympiad',
+      olimpiada: 'Participant in the 1st Canary Islands Informatics Olympiad',
+      iasc: 'International Astronomical Search Collaboration (NASA/Pan-STARRS)',
     },
     issueDates: {
       rh134: 'December 2024',
       rh124: 'October 2024',
       rh104: 'September 2024',
       olimpiada: 'February 2022',
+      iasc: 'May 2021',
     },
   },
   skills: {
