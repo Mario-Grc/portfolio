@@ -17,7 +17,7 @@ export const es = {
     details: 'Gran Canaria. Español nativo e Inglés B2. Abierto a nuevas oportunidades.',
     contact: 'Contactar',
     curriculum: 'Currículum',
-    curriculumUrl: '/documents/cv/cv-mario-garcia-ES.pdf',
+    curriculumUrl: 'documents/cv/cv-mario-garcia-ES.pdf',
   },
   projects: {
     title: 'Proyectos',
@@ -125,7 +125,7 @@ export const en: typeof es = {
     details: 'Gran Canaria. Native Spanish and B2 English. Open to new opportunities.',
     contact: 'Get in touch',
     curriculum: 'Resume',
-    curriculumUrl: '/documents/cv/cv-mario-garcia-EN.pdf',
+    curriculumUrl: 'documents/cv/cv-mario-garcia-EN.pdf',
   },
   projects: {
     title: 'Projects',
