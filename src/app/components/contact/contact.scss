@@ -37,9 +37,19 @@
 }
 
 .contact-option h3 {
+	align-items: center;
+	display: flex;
 	font-size: 0.875rem;
 	font-weight: 600;
+	gap: 0.45rem;
 	margin: 0 0 0.6rem;
+}
+
+.contact-option h3 img {
+	height: 1rem;
+	object-fit: contain;
+	transform: translateY(-1px);
+	width: 1rem;
 }
 
 .contact-option a,

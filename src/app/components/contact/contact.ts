@@ -1,9 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { LanguageService } from '../../i18n/language.service';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

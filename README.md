@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio con diseño minimalista en el que muestro algunos proyectos destacados, mi formación, certificaciones y demás información relevante.
+Portfolio con diseño minimalista en el que muestro algunos proyectos destacados, mi formación, certificaciones y demás información relevante. Desplegado automáticamente con Actions en GitHub Pages: https://mario-grc.github.io/portfolio/
 
 <img src="public/images/captura.png" width="900" alt="Captura de pantalla del portfolio" />
 
