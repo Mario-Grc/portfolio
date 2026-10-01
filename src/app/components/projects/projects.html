@@ -17,9 +17,10 @@
                     <p>{{ language.t().projects.descriptions[project.descriptionKey] }}</p>
                     <p class="project-technologies" [attr.aria-label]="language.t().projects.technologies">{{ project.technologies.join(', ') }}</p>
                 </div>
-                @if (project.codeUrl) {
-                <a class="project-link" [href]="project.codeUrl" target="_blank" rel="noopener noreferrer">{{ language.t().projects.viewCode }}</a>
-                }
+                <div class="project-media">
+                    <img [ngSrc]="project.imageUrl" width="480" height="270" [alt]="project.title">
+                    <a class="project-link" [href]="project.codeUrl" target="_blank" rel="noopener noreferrer">{{ language.t().projects.viewCode }}</a>
+                </div>
             </article>
             }
         </div>
