@@ -108,7 +108,7 @@
 .menu-icon,
 .menu-icon::before,
 .menu-icon::after {
-	background: var(--color-ink);
+	background: currentColor;
 	display: block;
 	height: 1px;
 	width: 16px;

@@ -25,7 +25,7 @@ export class Skills {
     },
     {
       key: 'data',
-      skills: ['PostgreSQL', 'MySQL', 'SQLite', 'APIs REST', 'MVC'],
+      skills: ['PostgreSQL', 'MySQL', 'SQLite', 'APIs REST'],
     },
     {
       key: 'tools',

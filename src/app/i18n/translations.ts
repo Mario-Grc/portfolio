@@ -35,7 +35,7 @@ export const es = {
       computerVisionAimAssist: 'Computer Vision',
     },
     descriptions: {
-      quackCode: 'Entorno para practicar programación con un editor de código, un asistente inspirado en la técnica Rubber Duck Debugging y ejecución de pruebas. El asistente utiliza modelos de IA locales.',
+      quackCode: 'Entorno para practicar programación con un editor de código, un asistente inspirado en la técnica Rubber Duck Debugging y ejecución de pruebas. El asistente utiliza modelos de IA locales. Este proyecto fue mi TFG, que obtuvo una calificación de 9.3/10.',
       clashPoints: 'Juego de preguntas y respuestas para Android, desarrollado junto a un compañero, en el que la velocidad y la precisión determinan la puntuación y el ranking global.',
       timac: 'Web para comprar en una ferretería ficticia, desarrollada junto a dos compañeros. Construida con Angular e Ionic para poder utilizarla también como aplicación móvil.',
       nexoRepair: 'Sistema full stack para gestionar las reparaciones y el trabajo diario de un negocio de dispositivos electrónicos.',
@@ -146,7 +146,7 @@ export const en: typeof es = {
       computerVisionAimAssist: 'Computer Vision',
     },
     descriptions: {
-      quackCode: 'An environment for practising programming with a code editor, an assistant inspired by Rubber Duck Debugging, and test execution. The assistant uses local AI models.',
+      quackCode: 'An environment for practising programming with a code editor, an assistant inspired by Rubber Duck Debugging, and test execution. The assistant uses local AI models. This project was my final degree project and received a grade of 9.3/10.',
       clashPoints: 'An Android quiz game developed with a teammate, where speed and accuracy determine the score and global ranking.',
       timac: 'A website for buying products from a fictional hardware store, developed with two teammates. Built with Angular and Ionic so it can also be used as a mobile application.',
       nexoRepair: 'A full-stack system for managing repairs and the daily work of an electronic device business.',
