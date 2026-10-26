@@ -22,11 +22,12 @@
 	font-weight: 600;
 	justify-self: start;
 	text-decoration: none;
+	white-space: nowrap;
 }
 
 .main-navigation {
 	display: flex;
-	gap: 2rem;
+	gap: clamp(0.75rem, 1.5vw, 2rem);
 	justify-content: center;
 }
 
@@ -169,5 +170,15 @@
 
 	.main-navigation a::after {
 		bottom: 0.45rem;
+	}
+
+	.language-switcher {
+		gap: 0.25rem;
+	}
+}
+
+@media(max-width: 360px) {
+	.menu-text {
+		display: none;
 	}
 }

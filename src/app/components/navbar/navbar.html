@@ -5,7 +5,7 @@
 		<button class="menu-toggle" type="button" aria-controls="main-navigation" [attr.aria-expanded]="menuOpen()"
 			(click)="menuOpen.update((isOpen) => !isOpen)">
 			<span class="menu-icon" aria-hidden="true"></span>
-			<span>{{ language.t().nav.menu }}</span>
+			<span class="menu-text">{{ language.t().nav.menu }}</span>
 		</button>
 
 		<nav id="main-navigation" class="main-navigation" [class.is-open]="menuOpen()"
