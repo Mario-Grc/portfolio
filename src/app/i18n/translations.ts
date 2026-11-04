@@ -35,12 +35,12 @@ export const es = {
       computerVisionAimAssist: 'Computer Vision',
     },
     descriptions: {
-      quackCode: 'Entorno para practicar programación con un editor de código, un asistente inspirado en la técnica Rubber Duck Debugging y ejecución de pruebas. El asistente utiliza modelos de IA locales. Este proyecto fue mi TFG, que obtuvo una calificación de 9.3/10.',
-      clashPoints: 'Juego de preguntas y respuestas para Android, desarrollado junto a un compañero, en el que la velocidad y la precisión determinan la puntuación y el ranking global.',
+      quackCode: 'Entorno para practicar programación con un editor de código y un asistente inspirado en la técnica Rubber Duck Debugging. El asistente, además de chatear, también puede intervenir proactivamente si detecta que estás atascado. Funciona con LLM locales. Este proyecto fue mi TFG, que obtuvo una calificación de 9.3/10.',
+      clashPoints: 'Juego de preguntas y respuestas para Android, desarrollado junto a un compañero, en el que la velocidad y la precisión determinan la puntuación. Incluye autenticación, modo invitado y un ranking global.',
       timac: 'Web para comprar en una ferretería ficticia, desarrollada junto a dos compañeros. Construida con Angular e Ionic para poder utilizarla también como aplicación móvil.',
-      nexoRepair: 'Sistema full stack para gestionar las reparaciones y el trabajo diario de un negocio de dispositivos electrónicos.',
+      nexoRepair: 'Proyecto full stack para gestionar clientes, empleados y reparaciones de un negocio de dispositivos electrónicos. Desarrollarlo me permitió profundizar en la construcción de una aplicación completa con Spring Boot, Angular y PostgreSQL, incluyendo autenticación JWT.',
       animalShelterApi: 'API REST desplegada en AWS para comparar dos arquitecturas: una basada en contenedores (ECS Fargate) y otra Serverless (Lambda). Automatizada por completo con CloudFormation, incluye infraestructura de red aislada (VPC, subnets privadas, NLB) y una comparativa de costes.',
-      computerVisionAimAssist: 'Proyecto académico de visión por computador, desarrollado junto a dos compañeros. Analiza la pantalla mientras juegas un videojuego para detectar y seguir objetivos en tiempo real, incorporando funciones experimentales de asistencia al apuntado.',
+      computerVisionAimAssist: 'Proyecto académico de visión por computador, desarrollado junto a dos compañeros. Analiza la pantalla mientras juegas un videojuego para detectar y seguir objetivos en tiempo real, incorporando funciones experimentales de asistencia al apuntado. Adicionalmente se comparan técnicas clásicas de procesamiento de imágenes con YOLO.',
     },
   },
   experience: {
@@ -146,12 +146,12 @@ export const en: typeof es = {
       computerVisionAimAssist: 'Computer Vision',
     },
     descriptions: {
-      quackCode: 'An environment for practising programming with a code editor, an assistant inspired by Rubber Duck Debugging, and test execution. The assistant uses local AI models. This project was my final degree project and received a grade of 9.3/10.',
-      clashPoints: 'An Android quiz game developed with a teammate, where speed and accuracy determine the score and global ranking.',
+      quackCode: 'An environment for practising programming with a code editor and an assistant inspired by Rubber Duck Debugging. Besides chatting, the assistant can also intervene proactively if it detects that you are stuck. It runs with local LLMs. This project was my final degree project and received a grade of 9.3/10.',
+      clashPoints: 'An Android quiz game developed with a teammate, where speed and accuracy determine the score. It includes authentication, guest mode, and a global leaderboard.',
       timac: 'A website for buying products from a fictional hardware store, developed with two teammates. Built with Angular and Ionic so it can also be used as a mobile application.',
-      nexoRepair: 'A full-stack system for managing repairs and the daily work of an electronic device business.',
+      nexoRepair: 'A full-stack project for managing customers, employees, and repairs in an electronic device business. Developing it allowed me to gain hands-on experience building a complete application with Spring Boot, Angular, and PostgreSQL, including JWT authentication.',
       animalShelterApi: 'A REST API deployed on AWS to compare two architectures: one based on containers (ECS Fargate) and another Serverless one (Lambda). Fully automated with CloudFormation, it includes isolated network infrastructure (VPC, private subnets, NLB) and a cost comparison.',
-      computerVisionAimAssist: 'An academic computer vision project developed with two teammates. It analyses the screen while playing a video game to detect and track targets in real time, incorporating experimental aiming assistance features.',
+      computerVisionAimAssist: 'An academic computer vision project developed with two teammates. It analyses the screen while playing a video game to detect and track targets in real time, incorporating experimental aiming assistance features. It also compares classical image processing techniques with YOLO.',
     },
   },
   experience: {
