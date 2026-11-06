@@ -33,6 +33,23 @@ main > [id] {
 	scroll-margin-top: var(--header-height);
 }
 
+.is-highlighted {
+	animation: section-highlight 1200ms ease-in-out;
+}
+
+@keyframes section-highlight {
+	0% {
+		background-color: transparent;
+	}
+	15%,
+	45% {
+		background-color: color-mix(in srgb, var(--color-accent) 14%, transparent);
+	}
+	100% {
+		background-color: transparent;
+	}
+}
+
 button,
 a {
 	font: inherit;

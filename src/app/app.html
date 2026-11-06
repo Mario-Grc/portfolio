@@ -1,6 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (click)="handleNavigationClick($event)"></app-navbar>
 
-<main>
+<main (click)="handleNavigationClick($event)">
   <app-hero id="inicio"></app-hero>
   <app-projects id="proyectos"></app-projects>
   <app-experience id="experiencia"></app-experience>
@@ -9,4 +9,4 @@
   <app-contact id="contacto"></app-contact>
 </main>
 
-<app-footer></app-footer>
+<app-footer (click)="handleNavigationClick($event)"></app-footer>
